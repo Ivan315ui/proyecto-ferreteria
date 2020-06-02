@@ -1,0 +1,22 @@
+$aguamarina: #0F5F75;
+$verde: #38D74F;
+$amarillo: #F0E74A;
+$naranja: #FFA536;
+$rojo: #f01119;
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
