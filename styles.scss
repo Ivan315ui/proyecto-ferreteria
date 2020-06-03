@@ -94,6 +94,7 @@ body {
         .top {
             display: flex;
             justify-content: flex-end;
+            margin-bottom: 3px;
             a {
                 padding: 3px 5px 0 5px;
             }
@@ -107,14 +108,20 @@ body {
                 font-size: 2.4rem;
                 height: 40px;
             }
-            input {
-                height: 28px;
-                width: 30%;
-            }
-            input::before {
-                content: "\f002";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
+            div{
+                background-color: white;
+                display: flex;
+                align-items: center;
+                input {
+                    border: none;
+                    height: 20px;
+                }
+                button {
+                    border: none;
+                    background-color: $naranja;
+                    height: 30px;
+                    color: $rojo;
+                }
             }
         }
         a {

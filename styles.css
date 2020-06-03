@@ -124,6 +124,7 @@ body header.contenedor .top {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-bottom: 3px;
 }
 
 body header.contenedor .top a {
@@ -148,15 +149,26 @@ body header.contenedor .middle a {
   height: 40px;
 }
 
-body header.contenedor .middle input {
-  height: 28px;
-  width: 30%;
+body header.contenedor .middle div {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body header.contenedor .middle input::before {
-  content: "\f002";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+body header.contenedor .middle div input {
+  border: none;
+  height: 20px;
+}
+
+body header.contenedor .middle div button {
+  border: none;
+  background-color: #FFA536;
+  height: 30px;
+  color: #f01119;
 }
 
 body header.contenedor a {
