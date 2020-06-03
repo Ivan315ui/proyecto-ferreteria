@@ -26,11 +26,6 @@ body .contenedor {
   margin: 0 10% 0 10%;
 }
 
-body .contenedor .intro {
-  min-height: 150px;
-  width: 100%;
-}
-
 body .contenedor .destacados {
   width: 100%;
   overflow: hidden;
@@ -104,34 +99,20 @@ body header.contenedor {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #0F5F75;
+  background-color: #1b1a1a;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: #F0E74A;
-  padding: 3px 10%;
+  padding: 10px 10%;
   font-family: "Teko", sans-serif;
 }
 
-body header.contenedor .top, body header.contenedor .middle, body header.contenedor .header-nav {
+body header.contenedor .first, body header.contenedor .header-nav {
   width: 100%;
 }
 
-body header.contenedor .top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-bottom: 3px;
-}
-
-body header.contenedor .top a {
-  padding: 3px 5px 0 5px;
-}
-
-body header.contenedor .middle {
+body header.contenedor .first {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,12 +125,12 @@ body header.contenedor .middle {
   margin-top: -10px;
 }
 
-body header.contenedor .middle a {
+body header.contenedor .first a {
   font-size: 2.4rem;
   height: 40px;
 }
 
-body header.contenedor .middle div {
+body header.contenedor .first div {
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,18 +138,22 @@ body header.contenedor .middle div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 2px;
 }
 
-body header.contenedor .middle div input {
+body header.contenedor .first div input {
   border: none;
   height: 20px;
 }
 
-body header.contenedor .middle div button {
+body header.contenedor .first div button {
   border: none;
   background-color: #FFA536;
   height: 30px;
+  width: 30px;
+  border-radius: 0 2px 2px 0;
   color: #f01119;
+  cursor: pointer;
 }
 
 body header.contenedor a {
@@ -183,24 +168,35 @@ body header.contenedor .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body header.contenedor .header-nav ul {
   list-style: none;
   text-transform: uppercase;
+  height: 34px;
+  padding: 5px;
 }
 
 body header.contenedor .header-nav ul li {
   display: inline-block;
-  padding: 0 3px;
+  padding: 0 3px 0 0;
   font-size: 1.5rem;
-  height: 24px;
+}
+
+body header.contenedor .header-nav ul:nth-child(2) {
+  height: 26px;
+}
+
+body header.contenedor .header-nav ul:nth-child(2) li {
+  display: inline-block;
+  padding: 0 3px;
+  font-size: 1rem;
 }
 
 @-webkit-keyframes switch {

@@ -25,10 +25,6 @@ body {
     .contenedor {
         width: 90%;
         margin: 0 10% 0 10%;
-        .intro {
-            min-height: 150px;
-            width: 100%;
-        }
         .destacados{
             width: 100%;
             overflow: hidden;
@@ -83,23 +79,15 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: $aguamarina;
+        background-color: rgb(27, 26, 26);
         align-items: center;
         color: $amarillo;
-        padding: 3px 10%;
+        padding: 10px 10%;
         font-family: $teko;
-        .top, .middle, .header-nav {
+        .first, .header-nav {
             width: 100%;
         }
-        .top {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 3px;
-            a {
-                padding: 3px 5px 0 5px;
-            }
-        }
-        .middle {
+        .first {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -112,6 +100,7 @@ body {
                 background-color: white;
                 display: flex;
                 align-items: center;
+                border-radius: 2px;
                 input {
                     border: none;
                     height: 20px;
@@ -120,7 +109,10 @@ body {
                     border: none;
                     background-color: $naranja;
                     height: 30px;
+                    width: 30px;
+                    border-radius: 0 2px 2px 0;
                     color: $rojo;
+                    cursor: pointer;
                 }
             }
         }
@@ -132,16 +124,26 @@ body {
         }
         .header-nav {
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
+            align-items: flex-end;
+            justify-content: space-between;
             ul {
                 list-style: none;
                 text-transform: uppercase;
+                height: 34px;
+                padding: 5px;
+                li {
+                    display: inline-block;
+                    padding: 0 3px 0 0;
+                    font-size: 1.5rem;
+                }
+               
+            }
+            ul:nth-child(2) {
+                height: 26px;
                 li {
                     display: inline-block;
                     padding: 0 3px;
-                    font-size: 1.5rem;
-                    height: 24px;
+                    font-size: 1rem;
                 }
             }
         }
