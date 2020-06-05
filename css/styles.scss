@@ -23,54 +23,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-family: $opensans;
+    background-color: grey;
     .contenedor {
         width: 80%;
-        margin: 0 10%;
-        .destacados{
-            width: 100%;
-            overflow: hidden;
-            ul {
-                display: flex;
-                width: 400%;
-                height: 350px;
-                animation: switch 30s infinite;
-                li {
-                    list-style: none;
-                    background-color: red;
-                    height: 350px;
-                    width: 100%;
-                    position: relative;
-                    &:nth-child(2) {
-                        background-color: rebeccapurple;
-                    }
-                    &:nth-child(3) {
-                        background-color: blue;
-                    }
-                    &:nth-child(4) {
-                        background-color: green;
-                    }
-                    h4 {
-                        position: absolute;
-                        bottom: 100px;
-                        width: 100%;
-                        text-align: center;
-                    }
-                    p {
-                        position: absolute;
-                        bottom: 50px;
-                        font-size: 0.8rem;
-                        width: 80%;
-                        text-align: center;
-                        left: 10%;
-                    }
-                }
-            }
-        }
+    }
+    footer .contenedor, header .contenedor {
+        box-sizing: content-box;
+        padding: 10px 10%;
     }
     header {
         width: 100%;
         .contenedor {
-            width: 100%;
             margin: 0;
             height: fit-content;
             display: flex;
@@ -79,7 +42,6 @@ body {
             background-color: rgb(27, 26, 26);
             align-items: center;
             color: $amarillo;
-            padding: 10px 10%;
             font-family: $teko;
         }
         .first {
@@ -145,8 +107,8 @@ body {
                     margin-bottom: -5px;
                     font-size: 1.5rem;
                     &:hover {
-                            color: $naranja;
-                            background-color: $aguamarina;
+                            background: $naranja;
+                            color: white;
                     }
                 }
                
@@ -164,6 +126,178 @@ body {
             }
         }
     }
+    div.contenedor.principal {
+        margin: 0 10%;
+        .slider{
+            width: 100%;
+            overflow: hidden;
+            ul {
+                display: flex;
+                width: 400%;
+                height: 400px;
+                animation: switch 30s infinite;
+                &:hover {
+                    li::before {
+                        background-color: $aguamarina;
+                    }
+                }
+                li {
+                    list-style: none;
+                    height: 400px;
+                    width: 100%;
+                    position: relative;
+                    background-image: url(../imgs/machines.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: -0.5px;
+                        bottom: -0.5px;
+                        height: 100%;
+                        width: 50%;
+                        background-color: $naranja;
+                        opacity: 0.8;
+                        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+                        transition: background-color 0.4s ease-out;
+                    }
+                    &:nth-child(2) {
+                        background-image: url(../imgs/paints.jpg);
+                    }
+                    &:nth-child(3) {
+                        background-image: url(../imgs/repo.jpg);
+                    }
+                    &:nth-child(4) {
+                        background-image: url(../imgs/envios.jpg);
+                    }
+                    h2, p {
+                        z-index: 1;
+                        color: white;
+                    }
+                    h2 {
+                        position: absolute;
+                        top: 70px;
+                        right: 6%;
+                        font-size: 1.7rem;
+                    }
+                    p {
+                        position: absolute;
+                        bottom: 50px;
+                        font-size: 0.8rem;
+                        width: 30%;
+                        text-align: right;
+                        right: 6%;
+                    }
+                }
+            }
+        }
+        .destacados {
+            padding: 5px;
+            background-color: white;
+            color:$aguamarina;
+            h2 {
+                margin-left: 10px;
+            }
+            .wrapper {
+                width: 100%;
+                overflow-x: scroll;
+                color: white;
+                &::-webkit-scrollbar {
+                    height: 8px;
+                }
+                &::-webkit-scrollbar-track {
+                    border-radius: 5px;
+                    background-color: lightgrey;
+                }
+                &::-webkit-scrollbar-thumb {
+                    box-shadow: inset 0 0 2.5px white;
+                    border-radius: 5px;
+                    background-color: $naranja;
+                }
+                .lista {
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: calc(250px * 6 + 15px * 6);
+                    padding: 5px 0;
+                    margin-bottom: 3px;
+                    a {
+                        width: 250px;
+                        color: $aguamarina;
+                        font-size: 0.8rem;
+                        .item {
+                            background-position: center;
+                            background-size: cover;
+                            width: 100%;
+                            height: 250px;
+                            border: 0.1px solid $naranja;
+                            position: relative;
+                            &.uno {
+                                background-image: url(../imgs/amoladora.jpg);
+                                position: relative;
+                            }
+                            &.dos {
+                                background-image: url(../imgs/kit.jpg);
+                            }
+                            &.tres {
+                                background-image: url(../imgs/mechas.jpg);
+                            }
+                            &.cuatro {
+                                background-image: url(../imgs/ladrillo.png);
+                            }
+                            &.cinco {
+                                background-image: url(../imgs/taladro.jpg);
+                            }
+                            &.seis {
+                                background-image: url(../imgs/destornilladores.jpg);
+                            }
+                        }
+                        .item::before {
+                            content: "";
+                            position: absolute;
+                            z-index: 1;
+                            background-color: $rojo;
+                            width: 100%;
+                            height: 100%;
+                            transform: translate(-50% -50%);
+                            opacity: 0;
+                            transform: scale(0);
+                            transition: all 0.4s ease-out;
+                        }
+                        .item::after {
+                            content: "Ver más";
+                            position: absolute;
+                            z-index: 1;
+                            width: 100%;
+                            height: 3rem;
+                            text-align: center;
+                            top: 50%;
+                            color: white;
+                            font-family: $teko;
+                            font-size: 3rem;
+                            transform: translateY(-50%);
+                            opacity: 0;
+                            transition: opacity 0.3s ease-out;
+                        }
+                        &:hover {
+                            color: $rojo;
+                            .item::before {
+                                transform: scale(1);
+                                background-color: $naranja;
+                                opacity: 0.8;
+                            }
+                            .item::after {
+                                opacity: 1;
+                            }
+                        }
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .panel-c {
         position: fixed;
         top: 60%;
@@ -173,6 +307,7 @@ body {
             text-align: center;
             width: 26px;
             transition: width 0.3s linear;
+            cursor: pointer;
         }
         i:nth-child(1), i:nth-child(2) {
             font-size: 1.2rem;
@@ -202,7 +337,6 @@ body {
         color: whitesmoke;
         .contenedor {
             margin: 0;
-            padding: 0 10%;
             box-sizing: content-box;
             display: flex;
             justify-content: space-evenly;
@@ -231,6 +365,9 @@ body {
                         color: white;
                     }
                 }
+            }
+            .map {
+                padding-bottom: 0;
             }
             .soporte, .información, .cuenta, .ubicacion {
                 margin-top: 5%;

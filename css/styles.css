@@ -21,62 +21,17 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-family: "Open Sans", sans-serif;
+  background-color: grey;
 }
 
 body .contenedor {
   width: 80%;
-  margin: 0 10%;
 }
 
-body .contenedor .destacados {
-  width: 100%;
-  overflow: hidden;
-}
-
-body .contenedor .destacados ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 400%;
-  height: 350px;
-  -webkit-animation: switch 30s infinite;
-          animation: switch 30s infinite;
-}
-
-body .contenedor .destacados ul li {
-  list-style: none;
-  background-color: red;
-  height: 350px;
-  width: 100%;
-  position: relative;
-}
-
-body .contenedor .destacados ul li:nth-child(2) {
-  background-color: rebeccapurple;
-}
-
-body .contenedor .destacados ul li:nth-child(3) {
-  background-color: blue;
-}
-
-body .contenedor .destacados ul li:nth-child(4) {
-  background-color: green;
-}
-
-body .contenedor .destacados ul li h4 {
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
-  text-align: center;
-}
-
-body .contenedor .destacados ul li p {
-  position: absolute;
-  bottom: 50px;
-  font-size: 0.8rem;
-  width: 80%;
-  text-align: center;
-  left: 10%;
+body footer .contenedor, body header .contenedor {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 10px 10%;
 }
 
 body header {
@@ -84,7 +39,6 @@ body header {
 }
 
 body header .contenedor {
-  width: 100%;
   margin: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -102,7 +56,6 @@ body header .contenedor {
       -ms-flex-align: center;
           align-items: center;
   color: #F0E74A;
-  padding: 10px 10%;
   font-family: "Teko", sans-serif;
 }
 
@@ -199,8 +152,8 @@ body header .header-nav ul li {
 }
 
 body header .header-nav ul li:hover {
-  color: #FFA536;
-  background-color: #0F5F75;
+  background: #FFA536;
+  color: white;
 }
 
 body header .header-nav ul:nth-child(2) {
@@ -217,6 +170,225 @@ body header .header-nav ul:nth-child(2) li:hover {
   background-color: initial;
 }
 
+body div.contenedor.principal {
+  margin: 0 10%;
+}
+
+body div.contenedor.principal .slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+body div.contenedor.principal .slider ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400%;
+  height: 400px;
+  -webkit-animation: switch 30s infinite;
+          animation: switch 30s infinite;
+}
+
+body div.contenedor.principal .slider ul:hover li::before {
+  background-color: #0F5F75;
+}
+
+body div.contenedor.principal .slider ul li {
+  list-style: none;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  background-image: url(../imgs/machines.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body div.contenedor.principal .slider ul li::before {
+  content: "";
+  position: absolute;
+  right: -0.5px;
+  bottom: -0.5px;
+  height: 100%;
+  width: 50%;
+  background-color: #FFA536;
+  opacity: 0.8;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
+}
+
+body div.contenedor.principal .slider ul li:nth-child(2) {
+  background-image: url(../imgs/paints.jpg);
+}
+
+body div.contenedor.principal .slider ul li:nth-child(3) {
+  background-image: url(../imgs/repo.jpg);
+}
+
+body div.contenedor.principal .slider ul li:nth-child(4) {
+  background-image: url(../imgs/envios.jpg);
+}
+
+body div.contenedor.principal .slider ul li h2, body div.contenedor.principal .slider ul li p {
+  z-index: 1;
+  color: white;
+}
+
+body div.contenedor.principal .slider ul li h2 {
+  position: absolute;
+  top: 70px;
+  right: 6%;
+  font-size: 1.7rem;
+}
+
+body div.contenedor.principal .slider ul li p {
+  position: absolute;
+  bottom: 50px;
+  font-size: 0.8rem;
+  width: 30%;
+  text-align: right;
+  right: 6%;
+}
+
+body div.contenedor.principal .destacados {
+  padding: 5px;
+  background-color: white;
+  color: #0F5F75;
+}
+
+body div.contenedor.principal .destacados h2 {
+  margin-left: 10px;
+}
+
+body div.contenedor.principal .destacados .wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  color: white;
+}
+
+body div.contenedor.principal .destacados .wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+body div.contenedor.principal .destacados .wrapper::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+body div.contenedor.principal .destacados .wrapper::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 2.5px white;
+          box-shadow: inset 0 0 2.5px white;
+  border-radius: 5px;
+  background-color: #FFA536;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: calc(250px * 6 + 15px * 6);
+  padding: 5px 0;
+  margin-bottom: 3px;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a {
+  width: 250px;
+  color: #0F5F75;
+  font-size: 0.8rem;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  border: 0.1px solid #FFA536;
+  position: relative;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.uno {
+  background-image: url(../imgs/amoladora.jpg);
+  position: relative;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.dos {
+  background-image: url(../imgs/kit.jpg);
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.tres {
+  background-image: url(../imgs/mechas.jpg);
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.cuatro {
+  background-image: url(../imgs/ladrillo.png);
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.cinco {
+  background-image: url(../imgs/taladro.jpg);
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item.seis {
+  background-image: url(../imgs/destornilladores.jpg);
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background-color: #f01119;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a .item::after {
+  content: "Ver más";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  top: 50%;
+  color: white;
+  font-family: "Teko", sans-serif;
+  font-size: 3rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a:hover {
+  color: #f01119;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a:hover .item::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #FFA536;
+  opacity: 0.8;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a:hover .item::after {
+  opacity: 1;
+}
+
+body div.contenedor.principal .destacados .wrapper .lista a p {
+  text-align: center;
+}
+
 body .panel-c {
   position: fixed;
   top: 60%;
@@ -229,6 +401,7 @@ body .panel-c * {
   width: 26px;
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
+  cursor: pointer;
 }
 
 body .panel-c i:nth-child(1), body .panel-c i:nth-child(2) {
@@ -266,7 +439,6 @@ body footer {
 
 body footer .contenedor {
   margin: 0;
-  padding: 0 10%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   display: -webkit-box;
@@ -305,6 +477,10 @@ body footer .contenedor div a {
 
 body footer .contenedor div a:hover {
   color: white;
+}
+
+body footer .contenedor .map {
+  padding-bottom: 0;
 }
 
 body footer .contenedor .soporte, body footer .contenedor .información, body footer .contenedor .cuenta, body footer .contenedor .ubicacion {
