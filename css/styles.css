@@ -732,6 +732,9 @@ footer .contenedor:nth-of-type(2) img {
     text-align: right;
   }
   footer .contenedor {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     padding: 5px 10%;
