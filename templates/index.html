@@ -9,22 +9,38 @@
 </head>
 <body>
     <header>
+        <input type="checkbox" id="display-nav">
         <div class="contenedor first">
             <a href="#">Ferretería Saavedra</a>
             <form>
-                <input type="text"><button><i class="fas fa-search"></i></button>
+                <input type="checkbox" id="display-search">
+                <input type="text">
+                <input type="submit" class="enviar">
+                <label class="display-search" for="display-search">
+                    <i class="fas fa-search"></i>
+                </label>
             </form>
         </div>
         <nav class="contenedor header-nav">
+            <label for="display-nav" class="menu-icon">
+                <span></span><span></span><span></span>
+            </label>
             <ul>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Preguntas frecuentes</a></li>
                 <li><a href="#">¿Cómo comprar?</a></li>
             </ul>
-            <ul>
+            <ul class="user">
                 <li><a href="#">Registrate</a></li>
                 <li><a href="#">Ingresá</a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <ul class="user">
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">¿Cómo comprar?</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +53,7 @@
                 </li>
                 <li>
                     <h2>Pintura y albañilería</h2>
-                    <p>Encontrá los materiales necesarios para continuar tu construcción aquí, con los mejores precios de la zona. Pinturas, cemento, cal, enduido y herramientas para la construcción aquí.</p>
+                    <p>Encontrá los materiales necesarios para continuar tu construcción aquí, con los mejores precios de la zona. Pinturas, cemento, cal y más.</p>
                 </li>
                 <li>
                     <h2>¡Tenemos stock!</h2>
@@ -100,10 +116,14 @@
         </section>
     </div>
     <div class="panel-c">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="far fa-envelope"></i>
-        <i class="fas fa-phone"></i>
+        <input type="checkbox" id="display-c">
+        <div class="display">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="far fa-envelope"></i>
+            <i class="fas fa-phone"></i>
+        </div>
+        <label for="display-c"><i class="far fa-comment"></i></label>
     </div>
     <footer>
         <div class="contenedor">
