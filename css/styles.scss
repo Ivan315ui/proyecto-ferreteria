@@ -599,5 +599,28 @@ footer {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    html {
+        font-size: 20px;
+    }
+    .panel-c {
+        position: fixed;
+        z-index: 1;
+        top: 65%;
+        input {
+            display: none;
+        }
+        i {
+            height: 34px;
+            width: 34px;
+        }
+        i:nth-child(3) {
+            height: 34px;
+            padding-top: 7px;
+            padding-bottom: 3px;
+        }
+        i:nth-child(4) {
+            padding-top: 7px;
+            padding-bottom: 3px;
+        }
+    }
 }
