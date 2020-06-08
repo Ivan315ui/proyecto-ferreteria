@@ -117,12 +117,13 @@ header {
                 display: inline-block;
                 margin-bottom: -2px;
                 padding: 3px 5px;
+                transition: all 0.3s ease-out;
                 &:hover {
                     background: $naranja;
                     color: white;
+
                 }
             }
-           
         }
         ul.user {
             display: initial;
@@ -130,6 +131,7 @@ header {
             li {
                 display: inline-block;
                 font-size: 1rem;
+                transition: none;
                 &:hover {
                     background-color: initial;
                 }
@@ -151,6 +153,9 @@ header {
             background-color: $naranja;
             transition: all 0.3s linear;
         }
+        &:hover span {
+            background-color: white;
+        }
     }
     .mobile-nav {
         position: absolute;
@@ -171,6 +176,9 @@ header {
             align-items: center;
             li {
                 width: 100%;
+                &:hover {
+                    color: $naranja;
+                }
             }
         }
     }
@@ -192,7 +200,7 @@ header {
             }
             ~.mobile-nav {
                 left: 0;
-                opacity: 1;
+                opacity: 0.9;
             }
         }
     }
