@@ -82,6 +82,7 @@ header {
                 }
                 i {
                     margin: auto;
+                    font-size: 16px;
                 }
             }
             #display-search, .enviar {
@@ -93,6 +94,7 @@ header {
                     ~input {
                         width: 125px;
                         border-radius: 3px;
+                        padding: 5px;
                     }
                 }
             }
@@ -149,7 +151,10 @@ header {
             height: 2px;
             margin: 3px auto;
             background-color: $naranja;
-            transition: all 0.3s linear;
+            transition: all 0.3s ease-out;
+        }
+        &:hover span {
+            background-color: white;
         }
     }
     .mobile-nav {
@@ -171,6 +176,13 @@ header {
             align-items: center;
             li {
                 width: 100%;
+                border-bottom: 0.5px solid currentColor;
+                &:hover {
+                    color: white;
+                }
+                &:last-child {
+                    border: none;
+                }
             }
         }
     }

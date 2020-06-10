@@ -114,6 +114,7 @@ header .first form .display-search:hover {
 
 header .first form .display-search i {
   margin: auto;
+  font-size: 16px;
 }
 
 header .first form #display-search, header .first form .enviar {
@@ -127,6 +128,7 @@ header .first form #display-search:checked ~ label, header .first form .enviar:c
 header .first form #display-search:checked ~ input, header .first form .enviar:checked ~ input {
   width: 125px;
   border-radius: 3px;
+  padding: 5px;
 }
 
 header a {
@@ -204,8 +206,12 @@ header .menu-icon span {
   height: 2px;
   margin: 3px auto;
   background-color: #FFA536;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+header .menu-icon:hover span {
+  background-color: white;
 }
 
 header .mobile-nav {
@@ -237,6 +243,15 @@ header .mobile-nav ul {
 
 header .mobile-nav ul li {
   width: 100%;
+  border-bottom: 0.5px solid currentColor;
+}
+
+header .mobile-nav ul li:hover {
+  color: white;
+}
+
+header .mobile-nav ul li:last-child {
+  border: none;
 }
 
 header #display-nav {
