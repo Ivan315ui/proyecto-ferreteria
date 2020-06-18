@@ -162,6 +162,8 @@ header .header-nav ul li {
   display: inline-block;
   margin-bottom: -2px;
   padding: 3px 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 header .header-nav ul li:hover {
@@ -177,6 +179,8 @@ header .header-nav ul.user {
 header .header-nav ul.user li {
   display: inline-block;
   font-size: 1rem;
+  -webkit-transition: none;
+  transition: none;
 }
 
 header .header-nav ul.user li:hover {
@@ -208,6 +212,10 @@ header .menu-icon span {
   background-color: #FFA536;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+header .menu-icon:hover span {
+  background-color: white;
 }
 
 header .menu-icon:hover span {
@@ -254,6 +262,10 @@ header .mobile-nav ul li:last-child {
   border: none;
 }
 
+header .mobile-nav ul li:hover {
+  color: #FFA536;
+}
+
 header #display-nav {
   display: none;
 }
@@ -274,7 +286,7 @@ header #display-nav:checked ~ nav .menu-icon span:nth-child(3) {
 
 header #display-nav:checked ~ .mobile-nav {
   left: 0;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 div.contenedor.principal .slider {
