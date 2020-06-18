@@ -262,10 +262,6 @@ header .mobile-nav ul li:last-child {
   border: none;
 }
 
-header .mobile-nav ul li:hover {
-  color: #FFA536;
-}
-
 header #display-nav {
   display: none;
 }
@@ -299,7 +295,7 @@ div.contenedor.principal .slider ul {
   display: -ms-flexbox;
   display: flex;
   width: 400%;
-  height: 400px;
+  height: 300px;
   -webkit-animation: switch 30s infinite;
           animation: switch 30s infinite;
 }
@@ -310,7 +306,7 @@ div.contenedor.principal .slider ul:hover li::before {
 
 div.contenedor.principal .slider ul li {
   list-style: none;
-  height: 400px;
+  height: 100%;
   width: 100%;
   position: relative;
   background-image: url(../imgs/machines.jpg);
@@ -364,6 +360,11 @@ div.contenedor.principal .slider ul li p {
   font-size: 0.8rem;
   width: 100%;
   text-align: left;
+}
+
+div.contenedor.principal .cats {
+  display: -ms-grid;
+  display: grid;
 }
 
 div.contenedor.principal .destacados {
@@ -734,6 +735,9 @@ footer .contenedor:nth-of-type(2) img {
   header .mobile-nav {
     display: none;
   }
+  div.contenedor.principal .slider ul {
+    height: 350px;
+  }
   div.contenedor.principal .slider ul li::before {
     height: 100%;
     width: 60%;
@@ -771,6 +775,9 @@ footer .contenedor:nth-of-type(2) img {
 
 /* Dispositivos grandes (laptops/PCs, +992px) */
 @media only screen and (min-width: 992px) {
+  div.contenedor.principal .slider ul {
+    height: 400px;
+  }
   div.contenedor.principal .slider ul li::before {
     height: 100%;
     width: 50%;
@@ -796,6 +803,13 @@ footer .contenedor:nth-of-type(2) img {
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+  header .first a {
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+  div.contenedor.principal .slider ul {
+    height: 500px;
   }
   .panel-c {
     position: fixed;

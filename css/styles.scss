@@ -221,7 +221,7 @@ div.contenedor.principal {
         ul {
             display: flex;
             width: 400%;
-            height: 400px;
+            height: 300px;
             animation: switch 30s infinite;
             &:hover {
                 li::before {
@@ -230,7 +230,7 @@ div.contenedor.principal {
             }
             li {
                 list-style: none;
-                height: 400px;
+                height: 100%;
                 width: 100%;
                 position: relative;
                 background-image: url(../imgs/machines.jpg);
@@ -278,6 +278,10 @@ div.contenedor.principal {
                 }
             }
         }
+    }
+    .cats {
+        display: grid;
+        //TODO
     }
     .destacados {
         padding: 5px;
@@ -542,6 +546,7 @@ footer {
     div.contenedor.principal {
         .slider{
             ul {
+                height: 350px;
                 li {
                     &::before {
                         height: 100%;
@@ -583,6 +588,7 @@ footer {
     div.contenedor.principal {
         .slider{
             ul {
+                height: 400px;
                 li {
                     &::before {
                         height: 100%;
@@ -619,6 +625,19 @@ footer {
 @media only screen and (min-width: 1200px) {
     html {
         font-size: 20px;
+    }
+    header .first {
+        a {
+            margin-top: -10px;
+            margin-bottom: 5px;
+        }
+    }
+    div.contenedor.principal {
+        .slider{
+            ul {
+                height: 500px;
+            }
+        }
     }
     .panel-c {
         position: fixed;
