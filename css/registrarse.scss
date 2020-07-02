@@ -73,7 +73,7 @@ section{
     width: 100%;
     display: flex;
     form{
-        width: 400px;
+        width: 660px;
         display: flex;
         padding: 50px;
         align-items: center;
@@ -86,6 +86,28 @@ section{
             width: 100%;
             font-family: Tahoma, Geneva, sans-serif;
         }
+        #nombre{
+            padding: 12px 20px;
+            margin-top: 40px;
+            border: none;
+            border-bottom: 2px solid grey;
+            box-sizing: border-box;
+            width: 45%;
+            font-family: $opensans;
+            font-size: 18px;
+        }
+        #apellido{
+            padding: 12px 20px;
+            margin: 8px 0;
+            margin-top: -50px;
+            margin-left: 50%;
+            border: none;
+            border-bottom: 2px solid grey;
+            box-sizing: border-box;
+            width: 45%;
+            font-family: $opensans;
+            font-size: 18px;
+        }
         #mail{
             padding: 12px 20px;
             margin: 8px 0;
@@ -93,7 +115,19 @@ section{
             border: none;
             border-bottom: 2px solid grey;
             box-sizing: border-box;
-            width: 200%;
+            width: 45%;
+            font-family: $opensans;
+            font-size: 18px;
+        }
+        #contraseña{
+            padding: 12px 20px;
+            margin: 8px 0;
+            margin-top: -57px;
+            margin-left: 50%;
+            border: none;
+            border-bottom: 2px solid grey;
+            box-sizing: border-box;
+            width: 45%;
             font-family: $opensans;
             font-size: 18px;
         }
@@ -101,6 +135,27 @@ section{
             border-bottom: 2px solid black;
         }
         #mail:focus {
+            background-color: rgb(248, 248, 180);
+            border: 1px solid black;
+        }
+        #nombre:hover{
+            border-bottom: 2px solid black;
+        }
+        #nombre:focus {
+            background-color: rgb(248, 248, 180);
+            border: 1px solid black;
+        }
+        #apellido:hover{
+            border-bottom: 2px solid black;
+        }
+        #apellido:focus {
+            background-color: rgb(248, 248, 180);
+            border: 1px solid black;
+        }
+        #contraseña:hover{
+            border-bottom: 2px solid black;
+        }
+        #contraseña:focus {
             background-color: rgb(248, 248, 180);
             border: 1px solid black;
         }

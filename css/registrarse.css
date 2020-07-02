@@ -95,7 +95,7 @@ section {
 }
 
 section form {
-  width: 400px;
+  width: 660px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,6 +116,32 @@ section form h2 {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
+section form #nombre {
+  padding: 12px 20px;
+  margin-top: 40px;
+  border: none;
+  border-bottom: 2px solid grey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+section form #apellido {
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: -50px;
+  margin-left: 50%;
+  border: none;
+  border-bottom: 2px solid grey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
 section form #mail {
   padding: 12px 20px;
   margin: 8px 0;
@@ -124,7 +150,21 @@ section form #mail {
   border-bottom: 2px solid grey;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 200%;
+  width: 45%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+section form #contraseña {
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: -57px;
+  margin-left: 50%;
+  border: none;
+  border-bottom: 2px solid grey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45%;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
 }
@@ -134,6 +174,33 @@ section form #mail:hover {
 }
 
 section form #mail:focus {
+  background-color: #f8f8b4;
+  border: 1px solid black;
+}
+
+section form #nombre:hover {
+  border-bottom: 2px solid black;
+}
+
+section form #nombre:focus {
+  background-color: #f8f8b4;
+  border: 1px solid black;
+}
+
+section form #apellido:hover {
+  border-bottom: 2px solid black;
+}
+
+section form #apellido:focus {
+  background-color: #f8f8b4;
+  border: 1px solid black;
+}
+
+section form #contraseña:hover {
+  border-bottom: 2px solid black;
+}
+
+section form #contraseña:focus {
   background-color: #f8f8b4;
   border: 1px solid black;
 }
@@ -389,4 +456,4 @@ footer .contenedor:nth-of-type(2) img {
     margin-bottom: 5px;
   }
 }
-/*# sourceMappingURL=ingresar.css.map */
+/*# sourceMappingURL=registrarse.css.map */
