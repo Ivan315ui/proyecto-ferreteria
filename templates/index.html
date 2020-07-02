@@ -1,88 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferretería Saavedra: Inicio</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/master.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <input type="checkbox" id="display-nav">
-        <div class="contenedor first">
-            <a href="#">Ferretería Saavedra</a>
-            <form>
-                <input type="checkbox" id="display-search">
-                <input type="text">
-                <input type="submit" class="enviar">
-                <label class="display-search" for="display-search">
-                    <i class="fas fa-search"></i>
-                </label>
-            </form>
+        <div class="first">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2><a href="">FS</a></h2>
+                    </div>
+                    <div class="col-7">
+                        <form action="">
+                            <div class="form-wrapper">
+                                <input type="text" placeholder="¿Qué buscás?">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <nav id="sesion">
+                            <ul>
+                                <li><a href="Ingresar.html">Ingresar</a></li>
+                                <li><a href="">Registrarme</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav class="contenedor header-nav">
-            <label for="display-nav" class="menu-icon">
-                <span></span><span></span><span></span>
-            </label>
-            <ul>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Preguntas frecuentes</a></li>
-                <li><a href="#">¿Cómo comprar?</a></li>
-            </ul>
-            <ul class="user">
-                <li><a href="#">Registrate</a></li>
-                <li><a href="Ingresa.html">Ingresá</a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
-            </ul>
-        </nav>
-        <nav class="mobile-nav">
-            <ul class="user">
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Preguntas frecuentes</a></li>
-                <li><a href="#">¿Cómo comprar?</a></li>
-            </ul>
-        </nav>
+        <div class="second">
+            <div class="container">
+                <div class="row">
+                    <div class="col categorias">
+                        <button>
+                            <h4>Categorías</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="drop">
+                            <a href=""><span>Categoría 1</span><i class="fas fa-chevron-right"></i></a>
+                            <a href=""><span>Categoría 2</span><i class="fas fa-chevron-right"></i></a>
+                            <a href=""><span>Categoría 3</span><i class="fas fa-chevron-right"></i></a>
+                            <a href=""><span>Categoría 4</span><i class="fas fa-chevron-right"></i></a>
+                            <a href=""><span>Categoría 5</span><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <nav>
+                            <ul>
+                                <li><a href="">Productos</a></li>
+                                <li><a href="">Preguntas frecuentes</a></li>
+                                <li><a href="">¿Cómo comprar?</a></li>
+                                <li><a href="">Contacto</a></li>
+                                <li><a href=""><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <div class="contenedor principal">
-        <section class="slider">
-            <ul>
-                <li>
-                    <h2>Excelencia en calidad</h2>
-                    <p>Maquinarias y herramientas de las marcas líderes en el mercado. Calidad certificada.</p>
-                </li>
-                <li>
-                    <h2>Pintura y albañilería</h2>
-                    <p>Encontrá los materiales necesarios para continuar tu construcción aquí, con los mejores precios de la zona. Pinturas, cemento, cal y más.</p>
-                </li>
-                <li>
-                    <h2>¡Tenemos stock!</h2>
-                    <p>Constantemente renovamos nuestros productos, asegurándonos de siempre tener lo que necesites.</p>
-                </li>
-                <li>
-                    <h2>¡Hacemos envíos!</h2>
-                    <p>Si vivís en Bahía Blanca o en la zona, te ayudamos a mantenerte activo llevándote lo que necesites a tu casa.*</p>
-                </li>
-            </ul>
-        </section>
-        <section class="cats">
-            <div class="maquinas">
-
+    <div class="contenido">
+        <div class="slider">
+            <div id="slide-wrapper">
+                <div class="slide" id="slide-1">
+                    <div class="desc">
+                        <h4>Calidad garantizada</h4>
+                        <p>
+                            Proveemos solamente los productos de mayor calidad y de marcas del mayor renombre en la
+                            industria, con tal de mejorar la experiencia de nuestros clientes. <a href="#">Ver
+                                más...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" id="slide-2">
+                    <div class="desc">
+                        <h4>Pinturería</h4>
+                        <p>
+                            Tenemos materiales para la construcción y pinturería. <a href="#">Ver más...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" id="slide-3">
+                    <div class="desc">
+                        <h4>¡Tenemos stock!</h4>
+                        <p>
+                            Nos manejamos por pedidos, por lo que, en caso de no tener algo de momento, lo encargaremos
+                            y en
+                            un par de días será tuyo. <br><a href="#">Aprendé más sobre cómo manejamos las ventas...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" id="slide-4">
+                    <div class="desc">
+                        <h4>¡Hacemos envíos!</h4>
+                        <p>Seguí trabajando, mientras nosotros nos encargamos de llevarte lo que necesites. <a
+                                href="#">Aprendé más sobre nuestros envíos...</a></p>
+                    </div>
+                </div>
+                <a class="prev" onclick="previousSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a class="next" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
             </div>
-            <div class="herramientas">
-
+            <div id="current">
+                <div class="indicator" data-value="0" onclick="currentSlide(this.getAttribute('data-value'))"></div>
+                <div class="indicator" data-value="1" onclick="currentSlide(this.getAttribute('data-value'))"></div>
+                <div class="indicator" data-value="2" onclick="currentSlide(this.getAttribute('data-value'))""></div>
+                <div class=" indicator" data-value="3" onclick="currentSlide(this.getAttribute('data-value'))"></div>
             </div>
-            <div class="jardin">
-
-            </div>
-            <div class="sanitario">
-
-            </div>
-            <div class="mecanica">
-                
-            </div>
-        </section>
-        <section class="destacados">
+        </div>
+        <div class="container">
             <h2>Productos destacados</h2>
             <div class="wrapper">
                 <div class="lista">
@@ -130,59 +171,74 @@
                     </a>
                 </div>
             </div>
-        </section>
-    </div>
-    <div class="panel-c">
-        <input type="checkbox" id="display-c">
-        <div class="display">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="far fa-envelope"></i>
-            <i class="fas fa-phone"></i>
+            <h2>Novedades</h2>
+            <div class="novedades">
+                <div class="item">
+                    
+                </div>
+                <div class="item">
+
+                </div>
+                <div class="item">
+
+                </div>
+                <div class="item">
+
+                </div>
+            </div>
         </div>
-        <label for="display-c"><i class="far fa-comment"></i></label>
     </div>
     <footer>
-        <div class="contenedor">
-            <div class="soporte">
-                <h5>Soporte</h5>
-                <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="">Nuestras marcas</a></li>
-                </ul>
-            </div>
-            <div class="información">
-                <h5>Información</h5>
-                <ul>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Cómo llegar</a></li>
-                    <li><a href="#">Garantías</a></li>
-                </ul>
-            </div>
-            <div class="cuenta">
-                <h5>Mi cuenta</h5>
-                <ul>
-                    <li><a href="#">Mi cuenta</a></li>
-                    <li><a href="#">Carrito</a></li>
-                    <li><a href="#">Programación de pedidos</a></li>
-                    <li><a href="#">Historial de compras</a></li>
-                </ul>
-            </div>
-            <div class="ubicacion">
-                <h5>Ubicación</h5>
-                <p><a target="_blank" href="https://www.google.com/maps/place/Ferreter%C3%ADa+Saavedra/@-38.723543,-62.265592,15z/data=!4m5!3m4!1s0x0:0x79b1eca73c23b0da!8m2!3d-38.7235425!4d-62.2655918?hl=es-419">Saavedra 332, B8000 Bahía Blanca, Buenos Aires.</a></p>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3112.750233932251!2d-62.26559199999999!3d-38.723543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x79b1eca73c23b0da!2sFerreter%C3%ADa%20Saavedra!5e0!3m2!1ses-419!2sar!4v1591224192412!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="wrapper">
+            <div class="container">
+                <div class="soporte">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="">Nuestras marcas</a></li>
+                    </ul>
+                </div>
+                <div class="información">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Cómo llegar</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </div>
+                <div class="cuenta">
+                    <h5>Mi cuenta</h5>
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Carrito</a></li>
+                        <li><a href="#">Programación de pedidos</a></li>
+                        <li><a href="#">Historial de compras</a></li>
+                    </ul>
+                </div>
+                <div class="ubicacion">
+                    <h5>Ubicación</h5>
+                    <p><a target="_blank"
+                            href="https://www.google.com/maps/place/Ferreter%C3%ADa+Saavedra/@-38.723543,-62.265592,15z/data=!4m5!3m4!1s0x0:0x79b1eca73c23b0da!8m2!3d-38.7235425!4d-62.2655918?hl=es-419">Saavedra
+                            332, B8000 Bahía Blanca, Buenos Aires.</a></p>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3112.750233932251!2d-62.26559199999999!3d-38.723543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x79b1eca73c23b0da!2sFerreter%C3%ADa%20Saavedra!5e0!3m2!1ses-419!2sar!4v1591224192412!5m2!1ses-419!2sar"
+                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </div>
-        <div class="contenedor">
-            <small>@ 2020 Ferretería Saavedra</small>
-            <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="data fiscal">
+        <div class="wrapper">
+            <div class="container">
+                <small>@ 2020 Ferretería Saavedra</small>
+                <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="data fiscal">
+            </div>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/79cc46baec.js" crossorigin="anonymous"></script>
+    <script src="../js/demo.js"></script>
 </body>
-</html>
 
+</html>
