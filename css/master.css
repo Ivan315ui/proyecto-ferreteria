@@ -476,8 +476,32 @@ header .categorias .drop a:hover {
 
 .contenido .container .wrapper .lista a {
   width: 250px;
-  color: #0F5F75;
+  color: black;
   font-size: 1rem;
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(1) .item {
+  background-image: url(../imgs/amoladora.jpg);
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(2) .item {
+  background-image: url(../imgs/kit.jpg);
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(3) .item {
+  background-image: url(../imgs/mechas.jpg);
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(4) .item {
+  background-image: url(../imgs/ladrillo.png);
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(5) .item {
+  background-image: url(../imgs/taladro.jpg);
+}
+
+.contenido .container .wrapper .lista a:nth-of-type(6) .item {
+  background-image: url(../imgs/destornilladores.jpg);
 }
 
 .contenido .container .wrapper .lista a .item {
@@ -488,31 +512,6 @@ header .categorias .drop a:hover {
   border: 0.1px solid #FFA536;
   border-radius: 3px;
   position: relative;
-}
-
-.contenido .container .wrapper .lista a .item.uno {
-  background-image: url(../imgs/amoladora.jpg);
-  position: relative;
-}
-
-.contenido .container .wrapper .lista a .item.dos {
-  background-image: url(../imgs/kit.jpg);
-}
-
-.contenido .container .wrapper .lista a .item.tres {
-  background-image: url(../imgs/mechas.jpg);
-}
-
-.contenido .container .wrapper .lista a .item.cuatro {
-  background-image: url(../imgs/ladrillo.png);
-}
-
-.contenido .container .wrapper .lista a .item.cinco {
-  background-image: url(../imgs/taladro.jpg);
-}
-
-.contenido .container .wrapper .lista a .item.seis {
-  background-image: url(../imgs/destornilladores.jpg);
 }
 
 .contenido .container .wrapper .lista a .item::before {
@@ -567,142 +566,73 @@ header .categorias .drop a:hover {
   text-align: center;
 }
 
-.contenido .container .wrapper2 {
-  width: 100%;
-  overflow-x: scroll;
-  color: white;
+.contenido .container .wrapper .lista a span {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+  color: #f01119;
 }
 
-.contenido .container .wrapper2::-webkit-scrollbar {
-  height: 8px;
-}
-
-.contenido .container .wrapper2::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: lightgrey;
-}
-
-.contenido .container .wrapper2::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 2.5px white;
-          box-shadow: inset 0 0 2.5px white;
-  border-radius: 5px;
+.contenido .container .wrapper:nth-of-type(2)::-webkit-scrollbar-thumb {
   background-color: #f01119;
 }
 
-.contenido .container .wrapper2 .ofertas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: calc(250px * 6 + 15px * 6);
-  padding: 5px 0;
-  margin-bottom: 3px;
-}
-
-.contenido .container .wrapper2 .ofertas #viejo {
+.contenido .container .wrapper:nth-of-type(2) .lista .viejo {
   text-decoration: line-through;
   font-size: 14px;
   color: grey;
 }
 
-.contenido .container .wrapper2 .ofertas #nuevo {
+.contenido .container .wrapper:nth-of-type(2) .lista .nuevo {
   font-size: 24px;
   color: #f01119;
 }
 
-.contenido .container .wrapper2 .ofertas a {
+.contenido .container .wrapper:nth-of-type(2) .lista a {
   width: 250px;
-  color: black;
-  font-size: 1rem;
 }
 
-.contenido .container .wrapper2 .ofertas a .item {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 250px;
-  border: 0.1px solid #f01119;
-  border-radius: 3px;
-  position: relative;
-}
-
-.contenido .container .wrapper2 .ofertas a .item.siete {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-child(1) .item {
   background-image: url(../imgs/pincel.jpg);
-  position: relative;
 }
 
-.contenido .container .wrapper2 .ofertas a .item.ocho {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-child(2) .item {
   background-image: url(../imgs/taladro2.jpg);
 }
 
-.contenido .container .wrapper2 .ofertas a .item.nueve {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-of-type(3) .item {
   background-image: url(../imgs/martillo.jpg);
 }
 
-.contenido .container .wrapper2 .ofertas a .item.diez {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-of-type(4) .item {
   background-image: url(../imgs/lijadora.jpg);
 }
 
-.contenido .container .wrapper2 .ofertas a .item.once {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-child(5) .item {
   background-image: url(../imgs/regla.jpg);
 }
 
-.contenido .container .wrapper2 .ofertas a .item.doce {
+.contenido .container .wrapper:nth-of-type(2) .lista a:nth-child(6) .item {
   background-image: url(../imgs/aceitadora.jpg);
 }
 
-.contenido .container .wrapper2 .ofertas a .item::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
+.contenido .container .wrapper:nth-of-type(2) .lista a .item {
+  border: 0.1px solid #f01119;
+}
+
+.contenido .container .wrapper:nth-of-type(2) .lista a .item::before {
   background-color: #FFA536;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translate(-50% -50%);
-          transform: translate(-50% -50%);
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
 }
 
-.contenido .container .wrapper2 .ofertas a .item::after {
+.contenido .container .wrapper:nth-of-type(2) .lista a .item::after {
   content: "Comprar";
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  color: white;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 3rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
 }
 
-.contenido .container .wrapper2 .ofertas a:hover {
-  color: #f01119;
+.contenido .container .wrapper:nth-of-type(2) .lista a:hover {
+  color: #0F5F75;
 }
 
-.contenido .container .wrapper2 .ofertas a:hover .item::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.contenido .container .wrapper:nth-of-type(2) .lista a:hover .item::before {
   background-color: #f01119;
-  opacity: 0.8;
-}
-
-.contenido .container .wrapper2 .ofertas a:hover .item::after {
-  opacity: 1;
-}
-
-.contenido .container .wrapper2 .ofertas a p {
-  text-align: center;
 }
 
 footer {

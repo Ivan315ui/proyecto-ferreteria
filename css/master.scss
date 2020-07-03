@@ -355,8 +355,38 @@ header {
             margin-bottom: 3px;
             a {
                 width: 250px;
-                color: $aguamarina;
+                color: black;
                 font-size: 1rem;
+                &:nth-of-type(1) {
+                    .item {
+                        background-image: url(../imgs/amoladora.jpg);
+                    }
+                }
+                &:nth-of-type(2) {
+                    .item {
+                        background-image: url(../imgs/kit.jpg);
+                    }
+                }
+                &:nth-of-type(3) {
+                    .item {
+                        background-image: url(../imgs/mechas.jpg);
+                    }
+                }
+                &:nth-of-type(4) {
+                    .item {
+                        background-image: url(../imgs/ladrillo.png);
+                    }
+                }
+                &:nth-of-type(5) {
+                    .item {
+                        background-image: url(../imgs/taladro.jpg);
+                    }
+                }
+                &:nth-of-type(6) {
+                    .item {
+                        background-image: url(../imgs/destornilladores.jpg);
+                    }
+                }
                 .item {
                     background-position: center;
                     background-size: cover;
@@ -365,25 +395,6 @@ header {
                     border: 0.1px solid $naranja;
                     border-radius: 3px;
                     position: relative;
-                    &.uno {
-                        background-image: url(../imgs/amoladora.jpg);
-                        position: relative;
-                    }
-                    &.dos {
-                        background-image: url(../imgs/kit.jpg);
-                    }
-                    &.tres {
-                        background-image: url(../imgs/mechas.jpg);
-                    }
-                    &.cuatro {
-                        background-image: url(../imgs/ladrillo.png);
-                    }
-                    &.cinco {
-                        background-image: url(../imgs/taladro.jpg);
-                    }
-                    &.seis {
-                        background-image: url(../imgs/destornilladores.jpg);
-                    }
                 }
                 .item::before {
                     content: "";
@@ -425,111 +436,74 @@ header {
                 p {
                     text-align: center;
                 }
+                span {
+                    font-family: $chakra;
+                    font-size: 1.5rem;
+                    color: $rojo;
+                }
             }
         }
     }
-    .wrapper2 {
-        width: 100%;
-        overflow-x: scroll;
-        color: white;
-        &::-webkit-scrollbar {
-            height: 8px;
-        }
-        &::-webkit-scrollbar-track {
-            border-radius: 5px;
-            background-color: lightgrey;
-        }
+    .wrapper:nth-of-type(2) {
         &::-webkit-scrollbar-thumb {
-            box-shadow: inset 0 0 2.5px white;
-            border-radius: 5px;
             background-color: $rojo;
         }
-        .ofertas {
-            display: flex;
-            justify-content: space-evenly;
-            width: calc(250px * 6 + 15px * 6);
-            padding: 5px 0;
-            margin-bottom: 3px;
-            #viejo{
+        .lista {
+            .viejo{
                 text-decoration: line-through;
                 font-size: 14px;
                 color: grey;
             }
-            #nuevo{
+            .nuevo{
                 font-size: 24px;
                 color: $rojo;
             }
             a {
                 width: 250px;
-                color: black;
-                font-size: 1rem;
-                .item {
-                    background-position: center;
-                    background-size: cover;
-                    width: 100%;
-                    height: 250px;
-                    border: 0.1px solid $rojo;
-                    border-radius: 3px;
-                    position: relative;
-                    &.siete {
+                &:nth-child(1) {
+                    .item {
                         background-image: url(../imgs/pincel.jpg);
-                        position: relative;
                     }
-                    &.ocho {
+                }
+                &:nth-child(2) {
+                    .item {
                         background-image: url(../imgs/taladro2.jpg);
                     }
-                    &.nueve {
+                }
+                &:nth-of-type(3) {
+                    .item {
                         background-image: url(../imgs/martillo.jpg);
                     }
-                    &.diez {
+                }
+                &:nth-of-type(4) {
+                    .item {
                         background-image: url(../imgs/lijadora.jpg);
                     }
-                    &.once {
+                }
+                &:nth-child(5) {
+                    .item {
                         background-image: url(../imgs/regla.jpg);
                     }
-                    &.doce {
+                }
+                &:nth-child(6) {
+                    .item {
                         background-image: url(../imgs/aceitadora.jpg);
                     }
                 }
+                .item {
+                    border: 0.1px solid $rojo;                    
+                }
                 .item::before {
-                    content: "";
-                    position: absolute;
-                    z-index: 1;
                     background-color: $naranja;
-                    width: 100%;
-                    height: 100%;
-                    transform: translate(-50% -50%);
-                    opacity: 0;
-                    transform: scale(0);
-                    transition: all 0.4s ease-out;
                 }
                 .item::after {
                     content: "Comprar";
-                    position: absolute;
-                    z-index: 1;
-                    width: 100%;
-                    text-align: center;
-                    top: 50%;
-                    color: white;
-                    font-family: $chakra;
-                    font-size: 3rem;
-                    transform: translateY(-50%);
-                    opacity: 0;
-                    transition: opacity 0.3s ease-out;
                 }
                 &:hover {
-                    color: $rojo;
+                    color: $aguamarina;
                     .item::before {
-                        transform: scale(1);
                         background-color: $rojo;
-                        opacity: 0.8;
                     }
-                    .item::after {
-                        opacity: 1;
-                    }
-                }
-                p {
-                    text-align: center;
                 }
             }
         }
