@@ -1,0 +1,153 @@
+$chakra: 'Chakra Petch', sans-serif;
+$open: 'Open Sans', sans-serif;
+$aguamarina: #0F5F75;
+$verde: #38D74F;
+$amarillo: #F0E74A;
+$naranja: #FFA536;
+$rojo: #f01119;
+
+body {
+    background-image: url(../imgs/repo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: static;
+    .first {
+        padding: 15px;
+        a {
+            &:hover {
+                color: $rojo;
+                transition: 0.3s linear;
+            }
+        }
+    }
+}
+
+.contenido {
+    margin: 0;
+    font-family: $open;
+    form {
+        background-color: white;
+        width: 320px;
+        border: 2px solid #333333;
+        color: grey;
+        margin: 10px auto;
+        border-radius: 3px;
+        padding: 10px;
+        padding-top: 0;
+        .option {
+            padding: 20px;
+            font-family: $chakra;
+            font-size: 1.2rem;
+            text-align: center;
+            position: relative;
+            z-index: 0;
+            &::before {
+                content: "";
+                width: 320px;
+                height: 100%;
+                position: absolute;
+                background-color: black;
+                opacity: 0.9;
+                top: -2px;
+                right: -12px;
+                z-index: -1;
+            }
+            a {
+                position: relative;
+                cursor: pointer;
+                &:first-child::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $aguamarina;
+                    bottom: -3px;
+                    transition: margin 0.5s ease-out;
+                }
+                &:first-child:hover::before {
+                    // ESTE ES EL QUE TIENE SUBRAYADO margin-left: 100%;
+                }
+            }
+        }
+        .inputs {
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+                margin: 10px 10%;
+                background-color: white;
+                color: $aguamarina;
+                position: relative;
+                border-bottom: 2px solid $aguamarina;
+                input {
+                    width: 90%;
+                    padding: 0 3px;
+                    border: 0;
+                    &:focus {
+                        outline: none;
+                        &~ .underline {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                    &:valid {
+                        //TODO
+                    }
+                }
+                i {
+                    width: 10%;
+                    margin-right: 5px;
+                    text-align: center;
+                }
+                .underline {
+                    position: absolute;
+                    width: 0;
+                    margin-left: 50%;
+                    height: 2px;
+                    left: 0;
+                    bottom: -2px;
+                    background-color: black;
+                    transition: 0.3s ease-out;
+                }
+            }
+            button {
+                display: block;
+                padding: 5px;
+                margin: auto;
+                border: 2px solid $aguamarina;
+                color: $aguamarina;
+                background-color: white;
+                font-weight: 600;
+                position: relative;
+                z-index: 0;
+                transition: 0.5s ease-out;
+                &::before {
+                    content: "";
+                    position: absolute;
+					width: 0;
+					margin-left: 50%;
+                    height: calc(100% + 4px);
+                    z-index: -1;
+                    background-color: $aguamarina;
+                    top: -2px;
+                    left: -2px;
+                    transition: inherit;
+                    clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+                }
+                &:hover {
+                    color: white;
+                    &::before {
+						margin-left: 0;
+						width: calc(100% + 4px);
+						clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                    }
+                }
+            }
+        }
+    }
+}

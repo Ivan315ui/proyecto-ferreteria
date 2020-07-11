@@ -1,4 +1,5 @@
 $chakra: 'Chakra Petch', sans-serif;
+$open: 'Open Sans', sans-serif;
 $aguamarina: #0F5F75;
 $verde: #38D74F;
 $amarillo: #F0E74A;
@@ -514,6 +515,7 @@ header {
 footer {
     width: 100%;
     color: whitesmoke;
+    font-family: $open;
     .wrapper {
         background-color: #252525;
         &:nth-of-type(2)  {

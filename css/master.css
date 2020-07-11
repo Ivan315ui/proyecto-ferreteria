@@ -638,6 +638,7 @@ header .categorias .drop a:hover {
 footer {
   width: 100%;
   color: whitesmoke;
+  font-family: "Open Sans", sans-serif;
 }
 
 footer .wrapper {
