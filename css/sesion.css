@@ -72,6 +72,16 @@ header .first a:hover {
   transition: margin 0.5s ease-out;
 }
 
+.contenido form #error {
+  padding: 5px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+  right: -20%;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
 .contenido form .inputs label {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -73,6 +73,14 @@ header {
                 }
             }
         }
+        #error {
+            padding: 5px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 0;
+            right: -20%;
+            transition: 0.5s ease-out;
+        }
         .inputs {
             label {
                 display: flex;

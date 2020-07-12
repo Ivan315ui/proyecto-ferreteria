@@ -23,21 +23,31 @@ form.addEventListener('submit', (e) => {
     element = document.getElementById('apellido');
     if (element.value === '' || element.value == null) {
         messages.push("No se proveyó un apellido.");
-    } else {
-        if (!element.value.match(formato)) {
-            messages.push("El apellido solo debe incluir letras.");
-        }
-        else if (element.value.length < 3 || element.value.length > 20) {
-            messages.push("La longitud del apellido debe ser mayor a 3 caracteres y menor a 20.");
-        }
+    } else if (!element.value.match(formato)) {
+        messages.push("El apellido solo debe incluir letras.");
+
+    } else if (element.value.length < 3 || element.value.length > 20) {
+        messages.push("La longitud del apellido debe ser mayor a 3 caracteres y menor a 20.");
     }
     element = document.getElementById('dni');
+    formato = /[0-9]+$/
+    if (element.value === '' || element.value == null) {
+        messages.push("No se proveyó un DNI.");
+    } else if (!element.value.match(formato)) {
+        messages.push("Un DNI válido sólo incluye números.");
+    } else if (element.value.length < 7 || element.value.length > 9) {
+        messages.push("Longitud del DNI inválida, los DNI deben tener entre 7 y 9 cifras para considerarse válidos.");
+    }
+    element = document.getElementById('mail');
     formato = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (condition) {
-        
+    if (element.value === '' || element.value == null) {
+        messages.push("No se proveyó un Email.");
+    } else if (!element.value.match(formato)) {
+        messages.push("Revisa el formato del campo Email, un formato apropiado es similar al siguiente: \"ejemplo@mail.com\".");
     }
     if (messages.length > 0) {
         e.preventDefault();
         errorElement.innerText = messages.join("\n");
+        errorElement.style.right = 0;
     }
 })
