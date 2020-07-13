@@ -72,16 +72,6 @@ header .first a:hover {
   transition: margin 0.5s ease-out;
 }
 
-.contenido form #error {
-  padding: 5px;
-  background-color: whitesmoke;
-  position: absolute;
-  top: 0;
-  right: -20%;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-}
-
 .contenido form .inputs label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,7 +83,7 @@ header .first a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px;
-  margin: 10px 10%;
+  margin: 5px 10% 10px;
   background-color: white;
   color: #0F5F75;
   position: relative;
@@ -131,6 +121,12 @@ header .first a:hover {
   background-color: black;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+}
+
+.contenido form .inputs .error {
+  background-color: white;
+  font-size: 0.7rem;
+  color: red;
 }
 
 .contenido form .inputs button {

@@ -73,21 +73,13 @@ header {
                 }
             }
         }
-        #error {
-            padding: 5px;
-            background-color: whitesmoke;
-            position: absolute;
-            top: 0;
-            right: -20%;
-            transition: 0.5s ease-out;
-        }
         .inputs {
             label {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 5px;
-                margin: 10px 10%;
+                margin: 5px 10% 10px;
                 background-color: white;
                 color: $aguamarina;
                 position: relative;
@@ -102,9 +94,6 @@ header {
                             width: 100%;
                             margin-left: 0;
                         }
-                    }
-                    &:valid {
-                        //TODO
                     }
                 }
                 i {
@@ -122,6 +111,11 @@ header {
                     background-color: black;
                     transition: 0.3s ease-out;
                 }
+            }
+            .error {
+                background-color: white;
+                font-size: 0.7rem;
+                color: red;
             }
             button {
                 display: block;

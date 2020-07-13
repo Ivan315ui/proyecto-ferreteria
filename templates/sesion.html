@@ -28,43 +28,43 @@
 		<h1 class="first"><a href="index.html">Ferreterría Saavedra</a></h1>
 	</header>
 	<div class="contenido">
-		<form action="" method="GET" autocomplete="on" id="form">
+		<form action="" method="GET" autocomplete="off" id="form">
 			<div class="option">
 				<a>Iniciar sesión</a>
 				<a>Registrarme</a>
 			</div>
-			<p id="error"></p>
-			<!--TODO: validación de los formularios (JS más completo)-->
+			<!--TODO: icons-->
 			<div class="inputs">
 				<label>
 					<i class="fas fa-font"></i>
 					<input name="name" id="nombre" placeholder="Tu nombre" title="Solo letras">
 					<div class="underline"></div>
 				</label>
+				<p class="error"></p>
 				<label>
 					<i class="fas fa-bold"></i>
 					<input name="surname" id="apellido" placeholder="Tu apellido" title="Solo letras">
 					<div class="underline"></div>
 				</label>
+				<p class="error"></p>
 				<label>
 					<i class="far fa-address-card"></i>
 					<input name="dni" id="dni" placeholder="DNI" title="Solo valores numéricos">
 					<div class="underline"></div>
 				</label>
+				<p class="error"></p>
 				<label>
 					<i class="far fa-envelope"></i>
 					<input name="mail" id="mail" placeholder="Tu Email" title="Un email válido, como ejemplo@mail.com">
 					<div class="underline"></div>
 				</label>
+				<p class="error"></p>
 				<label>
 					<i class="fas fa-key"></i>
 					<input type="password" name="pass" id="password" placeholder="Tu contraseña" title="La contraseña debe incluir números, así como al menos una mayúscula y una minúscula. También debe tener 8 caracteres o más.">
-					<a href="">
-						<i class="far fa-eye"></i>
-						<i class="far fa-eye-slash"></i>
-					</a>
 					<div class="underline"></div>
 				</label>
+				<p class="error"></p>
 				<button type="submit">Iniciar sesión</button>
 			</div>
 		</form>
