@@ -54,7 +54,7 @@ form.addEventListener('submit', (e) => {
 	} else {
 		messages.push("");
 	}
-	element = document.getElementById('password');
+	element = document.getElementById('pass');
 	formato = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
 	if (element.value === '' || element.value == null) {
 		messages.push("No se proveyó una contraseña.");
@@ -62,18 +62,23 @@ form.addEventListener('submit', (e) => {
 		messages.push("Se requiere al menos una minúscula, una mayúscula y un número para la contraseña.");
 	} else if (element.value.length < 8 || element.value.length > 20) {
 		messages.push("La contraseña debe tener entre 8 y 20 caracteres");
+	} else {
+		messages.push("");
 	}
-	if (messages.length > 0) {
-		e.preventDefault();
-		for (let i = 0; i < errorElement.length; i++) {
-			errorElement[i].innerText = messages[i];
-			errorElement[i].style.padding = "0 5px";
+	for (let i = 0; i < messages.length; i++) {
+		if (messages[i] !== "") {
+			e.preventDefault();
+			for (let i = 0; i < errorElement.length; i++) {
+				errorElement[i].innerText = messages[i];
+				errorElement[i].style.padding = "0 5px";
+			}
+			setTimeout(() => {
+				element = document.getElementById('nombre');
+				element.focus();
+			}, 1000);
+			break;
 		}
 	}
-	setTimeout(() => {
-		element = document.getElementById('nombre');
-		element.focus();
-	}, 500);
 });
 
 //TODO Password visibility
@@ -81,19 +86,10 @@ form.addEventListener('submit', (e) => {
 // assign onclick actions to option 
 function assignActions() {
 	var inicio = document.getElementById('iniciar');
-	var registro = DOCUMENT.getElementById('registro');
+	var registro = document.getElementById('registro');
 	inicio.addEventListener('click', toggleSession('login'));
 	registro.addEventListener('click', toggleSession('register'));
 }
 //TODO Change content
-function toggleSession(currentState) {
-	var currentOption = document.getElementsByClassName('option');
-	if (currentState === "login") {
-
-	} else if (currentState == null) {
-
-	}
-}
-
 
 // TODO force correct form's initial state
