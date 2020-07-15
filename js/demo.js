@@ -16,7 +16,7 @@ for (let i = 0; i < indicator.length; i++) {
 }
 // start and repeat slider's main function every 4.5 seconds
 currentSlide(index);
-setInterval(() => {
+var slideTimer = setInterval(() => {
     index++;
     if (index < 0) {
         index = 3;
@@ -24,7 +24,7 @@ setInterval(() => {
     if (index > 3) {
         index = 0;
     }
-    currentSlide(index)
+    currentSlide(index);
 }, 4500);
 // right arrow function
 function nextSlide() {
@@ -33,6 +33,17 @@ function nextSlide() {
         index = 0;
     }
     currentSlide(index);
+    clearInterval(slideTimer);
+    slideTimer = setInterval(() => {
+        index++;
+        if (index < 0) {
+            index = 3;
+        }
+        if (index > 3) {
+            index = 0;
+        }
+        currentSlide(index);
+    }, 4500);
 }
 // left arrow function 
 function previousSlide() {
@@ -41,6 +52,17 @@ function previousSlide() {
         index = 3;
     }
     currentSlide(index);
+    clearInterval(slideTimer);
+    slideTimer = setInterval(() => {
+        index++;
+        if (index < 0) {
+            index = 3;
+        }
+        if (index > 3) {
+            index = 0;
+        }
+        currentSlide(index);
+    }, 4500);
 }
 // slider's main function
 function currentSlide(value) {
