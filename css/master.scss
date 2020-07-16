@@ -37,19 +37,6 @@ header {
     ul {
         list-style: none;
     }
-    .container {
-        display: flex;
-        justify-content: space-between;
-        h2 {
-            width: 10%;
-        }
-        .search {
-            width: 50%;
-        }
-        .sesion {
-            width: 10%;
-        }
-    }
     .first {
         padding: 10px;
         background-color: rgb(27, 26, 26);
@@ -63,42 +50,26 @@ header {
                 }
             }
         }
-        .search {
+        .col-7 {
             display: flex;
             align-items: center;
             form {
-                padding: 7px;
+                padding: 3px;
                 width: 100%;
                 background-color: white;
-                border-radius: 2px;
-                padding-right: 0;
                 div {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     height: 24px;
-                    
+                    padding: 3px;
                     input {
                         border: none;
                         width: 100%;
+                        border-right: 1px solid grey;
+                        margin-right: 3px;
                         &:focus {
                             outline: none;
-                        }
-                    }
-                    button {
-                        background-color: $naranja;
-                        color: $aguamarina;
-                        border: none;
-                        width: 38px;
-                        padding: 7px;
-                        border-radius: 0 2px 2px 0;
-                        transition: 0.3s ease-in-out;
-                        &:focus {
-                            outline: none;
-                        }
-                        &:hover {
-                            background-color: $aguamarina;
-                            color: $naranja;
                         }
                     }
                 }
@@ -128,7 +99,7 @@ header {
         }
         
     }
-    .sesion {
+    nav {
         display: flex;
         height: 100%;
         ul {
