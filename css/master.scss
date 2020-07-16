@@ -704,6 +704,14 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+    #display-menu {
+        display: none;
+        &:checked {
+            &~header .mobile-menu {
+                left: -100%;
+            }
+        }
+    }
     header {
         .first {
             .form {

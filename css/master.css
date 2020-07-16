@@ -889,6 +889,12 @@ footer .container .ubicacion {
 }
 
 @media only screen and (min-width: 768px) {
+  #display-menu {
+    display: none;
+  }
+  #display-menu:checked ~ header .mobile-menu {
+    left: -100%;
+  }
   header .first .form {
     display: initial;
   }
