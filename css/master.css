@@ -40,6 +40,27 @@ header ul {
   list-style: none;
 }
 
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container h2 {
+  width: 10%;
+}
+
+header .container .search {
+  width: 50%;
+}
+
+header .container .sesion {
+  width: 10%;
+}
+
 header .first {
   padding: 10px;
   background-color: #1b1a1a;
@@ -56,7 +77,7 @@ header .first h2 a:hover {
   transition: 0.3s linear;
 }
 
-header .first .col-7 {
+header .first .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,13 +86,15 @@ header .first .col-7 {
           align-items: center;
 }
 
-header .first .col-7 form {
-  padding: 3px;
+header .first .search form {
+  padding: 7px;
   width: 100%;
   background-color: white;
+  border-radius: 2px;
+  padding-right: 0;
 }
 
-header .first .col-7 form div {
+header .first .search form div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,18 +105,35 @@ header .first .col-7 form div {
       -ms-flex-align: center;
           align-items: center;
   height: 24px;
-  padding: 3px;
 }
 
-header .first .col-7 form div input {
+header .first .search form div input {
   border: none;
   width: 100%;
-  border-right: 1px solid grey;
-  margin-right: 3px;
 }
 
-header .first .col-7 form div input:focus {
+header .first .search form div input:focus {
   outline: none;
+}
+
+header .first .search form div button {
+  background-color: #FFA536;
+  color: #0F5F75;
+  border: none;
+  width: 38px;
+  padding: 7px;
+  border-radius: 0 2px 2px 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+header .first .search form div button:focus {
+  outline: none;
+}
+
+header .first .search form div button:hover {
+  background-color: #0F5F75;
+  color: #FFA536;
 }
 
 header .first li {
@@ -124,14 +164,14 @@ header .first li a:hover::before {
   width: 100%;
 }
 
-header nav {
+header .sesion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
-header nav ul {
+header .sesion ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +182,7 @@ header nav ul {
   width: 100%;
 }
 
-header nav ul li {
+header .sesion ul li {
   padding: 5px;
 }
 
@@ -687,7 +727,7 @@ footer .container div h5 {
 }
 
 footer .container div p, footer .container div li {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   padding-left: 3px;
   margin-bottom: 2px;
   color: grey;

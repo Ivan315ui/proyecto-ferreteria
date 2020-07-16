@@ -24,25 +24,48 @@
 
 <body>
 	<header>
-		<h1 class="first"><a href="index.html">Ferreterría Saavedra</a></h1>
+		<h1 class="first container"><a href="index.html">Ferreterría Saavedra</a></h1>
 	</header>
-	<div class="contenido">
-		<!--TODO assign which form is loaded depending on previous page-->
-		<form action="" autocomplete="on" id="form" onload="assignOption()">
-			<div class="option" onload="assignActions()">
+	<div class="container">
+		<form action="" autocomplete="off" id="form">
+			<div class="option">
 				<span>
-					<a id="iniciar">Iniciar sesión</a>
-					<a id="registro">Registrarme</a>
+					<a id="login">Iniciar sesión</a>
+					<a id="register">Registrarme</a>
 					<div class="underline"></div>
 				</span>
 			</div>
-			<!--TODO: icons-->
-			<!--TODO: change content-->
+			<!--TODO: pass visibility-->
+			<div class="banner">
+				<h5 id="greeting">¡Bienvenido de nuevo!</h5>
+				<p>
+					Por favor, ingresa tus credenciales para disfrutar todos nuestros beneficios.
+				</p>
+			</div>
+			<div class="inputs">
+				<div class="form-wrapper">
+					<label>
+						<i class="far fa-envelope"></i>
+						<input name="mail" id="login-mail" placeholder="Email" title="Un email válido, como ejemplo@mail.com">
+						<div class="underline"></div>
+					</label>
+					<p class="login-error"></p>
+				</div>
+				<div class="form-wrapper">
+					<label>
+						<i class="fas fa-key"></i>
+						<input type="password" name="pass" id="login-pass" placeholder="Contraseña" title="La contraseña debe incluir números, así como al menos una mayúscula y una minúscula. También debe tener 8 caracteres o más.">
+						<div class="underline"></div>
+					</label>
+					<p class="login-error"></p>
+				</div>
+				<button type="submit">Iniciar sesión</button>
+			</div>
 			<div class="inputs">
 				<div class="form-wrapper">
 					<label>
 						<i class="fas fa-font"></i>
-						<input name="name" id="nombre" placeholder="Tu nombre" title="Solo letras">
+						<input name="name" id="name" placeholder="Nombre" title="Solo letras">
 						<div class="underline"></div>
 					</label>
 					<p class="error"></p>
@@ -50,7 +73,7 @@
 				<div class="form-wrapper">
 					<label>
 						<i class="fas fa-bold"></i>
-						<input name="surname" id="apellido" placeholder="Tu apellido" title="Solo letras">
+						<input name="surname" id="surname" placeholder="Apellido" title="Solo letras">
 						<div class="underline"></div>
 					</label>
 					<p class="error"></p>
@@ -63,10 +86,11 @@
 					</label>
 					<p class="error"></p>
 				</div>
+				<div class="form-wrapper"></div>
 				<div class="form-wrapper">
 					<label>
 						<i class="far fa-envelope"></i>
-						<input name="mail" id="mail" placeholder="Tu Email" title="Un email válido, como ejemplo@mail.com">
+						<input name="mail" id="mail" placeholder="Email" title="Un email válido, como ejemplo@mail.com">
 						<div class="underline"></div>
 					</label>
 					<p class="error"></p>
@@ -74,12 +98,12 @@
 				<div class="form-wrapper">
 					<label>
 						<i class="fas fa-key"></i>
-						<input type="password" name="pass" id="pass" placeholder="Tu contraseña" title="La contraseña debe incluir números, así como al menos una mayúscula y una minúscula. También debe tener 8 caracteres o más.">
+						<input type="password" name="pass" id="pass" placeholder="Contraseña" title="La contraseña debe incluir números, así como al menos una mayúscula y una minúscula. También debe tener 8 caracteres o más.">
 						<div class="underline"></div>
 					</label>
 					<p class="error"></p>
 				</div>
-				<button type="submit">Iniciar sesión</button>
+				<button type="submit">Registrarme</button>
 			</div>
 		</form>
 	</div>
