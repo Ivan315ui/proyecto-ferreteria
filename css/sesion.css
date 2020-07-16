@@ -1,0 +1,265 @@
+body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-image: url(../imgs/repo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: static;
+  width: 100%;
+  background-color: #1b1a1a;
+}
+
+header .first {
+  padding: 15px;
+  font-size: 2rem;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+header .first a:hover {
+  color: #f01119;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.underline {
+  position: absolute;
+  width: 0;
+  margin-left: 50%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: black;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.container {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container form {
+  background-color: white;
+  width: 320px;
+  border: 2px solid #333333;
+  color: grey;
+  margin: 10px auto;
+  border-radius: 3px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.container form .option {
+  padding: 20px 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.2rem;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.container form .option::before {
+  content: "";
+  width: 320px;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.9;
+  top: -2px;
+  right: -22px;
+  z-index: -1;
+}
+
+.container form .option span {
+  position: relative;
+}
+
+.container form .option span a {
+  color: whitesmoke;
+  cursor: pointer;
+  position: relative;
+  padding: 3px;
+}
+
+.container form .option span .underline {
+  z-index: -1;
+  margin: 0;
+  bottom: 0;
+  background-color: #0F5F75;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+
+.container form .banner {
+  margin: 0 10%;
+}
+
+.container form .banner h5 {
+  margin-bottom: -20px;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFA536;
+}
+
+.container form .banner p {
+  display: none;
+}
+
+.container form .inputs {
+  margin: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container form .inputs .form-wrapper {
+  margin: 10px 0 5px;
+  width: 100%;
+}
+
+.container form .inputs .form-wrapper:nth-child(4) {
+  display: none;
+}
+
+.container form .inputs label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  background-color: white;
+  color: #0F5F75;
+  position: relative;
+  border-bottom: 2px solid #0F5F75;
+}
+
+.container form .inputs label input {
+  width: 90%;
+  padding: 0 3px;
+  border: 0;
+}
+
+.container form .inputs label input:focus {
+  outline: none;
+}
+
+.container form .inputs label input:focus ~ .underline {
+  width: 100%;
+  margin-left: 0;
+}
+
+.container form .inputs label i {
+  width: 10%;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.container form .inputs .error, .container form .inputs .login-error {
+  background-color: white;
+  font-size: 0.7rem;
+  color: red;
+}
+
+.container form .inputs button {
+  display: block;
+  padding: 5px;
+  margin: 10px auto 0;
+  border: 2px solid #0F5F75;
+  color: #0F5F75;
+  background-color: white;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.container form .inputs button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  margin-left: 50%;
+  height: calc(100% + 4px);
+  z-index: -1;
+  background-color: #0F5F75;
+  top: -2px;
+  left: -2px;
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+}
+
+.container form .inputs button:hover {
+  color: white;
+}
+
+.container form .inputs button:hover::before {
+  margin-left: 0;
+  width: calc(100% + 4px);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.container form .inputs button:focus {
+  background-color: white;
+  color: #0F5F75;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  outline: none;
+}
+
+.container form .inputs button:focus::before {
+  width: 0;
+  margin-left: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .container form {
+    width: 640px;
+    padding: 0;
+  }
+  .container form .option {
+    width: 100%;
+  }
+  .container form .option span {
+    font-size: 1.2rem;
+  }
+  .container form .option::before {
+    width: calc(100% + 4px);
+    right: -2px;
+  }
+  .container form .banner h5 {
+    margin: initial;
+    text-align: left;
+  }
+  .container form .banner p {
+    display: initial;
+    padding: 5px;
+    text-align: left;
+  }
+  .container form .inputs .form-wrapper {
+    width: 50%;
+    padding: 5px;
+  }
+  .container form .inputs .form-wrapper:nth-child(4) {
+    display: initial;
+  }
+  .container form .inputs button {
+    margin: 20px 5px 20px auto;
+  }
+}
+/*# sourceMappingURL=sesion.css.map */
