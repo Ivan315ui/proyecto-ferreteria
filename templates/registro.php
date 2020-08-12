@@ -13,8 +13,14 @@ if (isset($_POST['register'])){
         $resultado = mysqli_query($conexion, $consulta);
         if ($resultado) {
             echo "Te inscribiste";
+            echo "<br>";
+            echo '<a href="index.html">Volver a pagina de inicio</a>';
         }else{
             echo "No te inscribiste";
+            echo "<br>";
+            echo '<a href="index.html">Volver a pagina de inicio</a>';
+            echo "<br>";
+            echo '<a href="sesion.php">Volver a pagina de registro</a>';
         }
     }
 }
