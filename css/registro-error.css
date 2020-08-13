@@ -1,0 +1,133 @@
+body {
+  background-image: url(../imgs/repo.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  position: initial;
+  padding: 0 0 0 15px;
+}
+
+header h2 {
+  font-size: 2.2rem;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+header h2:hover {
+  color: #BA1319;
+}
+
+.contenido {
+  color: whitesmoke;
+  margin: 5% 0;
+}
+
+.contenido .container {
+  padding: 15px;
+  background-color: #051A2B;
+}
+
+.contenido .container h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0F5F75;
+}
+
+.contenido .container ul {
+  padding-left: 25px;
+}
+
+.contenido .container ul, .contenido .container p {
+  margin-left: 5px;
+}
+
+.contenido .container p a, .contenido .container ul a {
+  color: #FFA536;
+  font-weight: 600;
+}
+
+.contenido .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 15px 0 0 auto;
+}
+
+.contenido .container div a {
+  padding: 10px;
+  color: #0F5F75;
+  min-width: 100px;
+  text-align: center;
+  background-color: whitesmoke;
+  border: 3px solid #0F5F75;
+  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.contenido .container div a:first-child {
+  margin-right: 15px;
+}
+
+.contenido .container div a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  margin-left: 50%;
+  height: calc(100% + 4px);
+  z-index: -1;
+  background-color: #0F5F75;
+  top: -2px;
+  left: -2px;
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+}
+
+.contenido .container div a:hover {
+  color: whitesmoke;
+}
+
+.contenido .container div a:hover::before {
+  margin-left: 0;
+  width: calc(100% + 4px);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.contenido .container div a:focus {
+  background-color: white;
+  color: #0F5F75;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  outline: none;
+}
+
+.contenido .container div a:focus::before {
+  width: 0;
+  margin-left: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenido {
+    margin: 5% 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .contenido {
+    margin: 5% 0;
+  }
+}
+/*# sourceMappingURL=registro-error.css.map */

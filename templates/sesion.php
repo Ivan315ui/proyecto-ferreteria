@@ -110,7 +110,6 @@
 	<?php
 		include_once("registro.php");
 	?>
-	</include>
 	<footer>
 		<div class="wrapper">
 			<div class="container">

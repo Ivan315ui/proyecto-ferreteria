@@ -16,11 +16,7 @@ if (isset($_POST['register'])){
             echo "<br>";
             echo '<a href="index.html">Volver a pagina de inicio</a>';
         }else{
-            echo "No te inscribiste";
-            echo "<br>";
-            echo '<a href="index.html">Volver a pagina de inicio</a>';
-            echo "<br>";
-            echo '<a href="sesion.php">Volver a pagina de registro</a>';
+            header("Location: registro-error.php");
         }
     }
 }
