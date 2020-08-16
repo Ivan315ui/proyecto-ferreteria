@@ -12,9 +12,7 @@ if (isset($_POST['register'])){
         $consulta = "INSERT INTO usuarios (Email, Nombre, Apellido, Contraseña, DNI) VALUES ('$mail','$name','$surname','$pass','$dni')";
         $resultado = mysqli_query($conexion, $consulta);
         if ($resultado) {
-            echo "Te inscribiste";
-            echo "<br>";
-            echo '<a href="index.html">Volver a pagina de inicio</a>';
+            header("Location:registro-exito.html");
         }else{
             header("Location: registro-error.php");
         }
